@@ -194,7 +194,6 @@ footer {
         flex: 1 1 100%; /* Forces cards to take full width on phones */
         max-width: 100%;
     }
-}
     .registration-card {
         width: 95% !important;
         margin: 10px auto;
