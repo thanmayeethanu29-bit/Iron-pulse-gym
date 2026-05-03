@@ -1,0 +1,215 @@
+/* --- UNIVERSAL SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+header {
+    background: #000;
+    padding: 20px 0;
+    border-bottom: 2px solid #ff4d4d;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff4d4d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- CONTACT HEADER (Color Updated to Gradient) --- */
+.contact-header {
+    text-align: center;
+    padding: 100px 20px 80px; /* Adjusted padding to match Programs style */
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%); /* Same as programmes page */
+}
+
+.contact-header h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 900; /* Bolded to match Programs style */
+}
+
+.contact-header h1 span {
+    color: #ff4d4d;
+}
+
+/* --- LAYOUT CONTAINER --- */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* --- CONTACT INFO (Left Side) --- */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #ff4d4d;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+/* --- VIEW MAP BUTTON --- */
+.btn-map {
+    display: inline-block;
+    margin-top: 25px; /* Adds space below your contact info */
+    padding: 15px 35px;
+    background: transparent;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px; /* Consistent with your form and header style */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-map:hover {
+    background: #ff4d4d;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+    transform: translateY(-5px); /* Matches the "Pop" effect of your other buttons */
+}
+
+
+/* --- CONTACT FORM (Right Side) --- */
+.contact-form {
+    flex: 1;
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.4s ease; 
+}
+
+.contact-form:hover {
+    transform: translateY(-10px);
+    border-color: #ff4d4d;
+}
+
+/* --- FORM ELEMENTS --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #121212;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ff4d4d;
+}
+
+/* --- SUBMIT BUTTON --- */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    background: #e60000;
+    transform: scale(1.02);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    border-top: 1px solid #333;
+    color: #777;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+    .btn-map {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+    

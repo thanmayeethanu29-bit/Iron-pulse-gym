@@ -1,0 +1,170 @@
+/* --- UNIVERSAL SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+header {
+    background: #000;
+    padding: 20px 0;
+    border-bottom: 2px solid #ff4d4d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.logo span { color: #ff4d4d; }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 25px; }
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* --- PROGRAMS HEADER --- */
+.programs-header {
+    text-align: center;
+    padding: 100px 20px 60px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+.programs-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.programs-header h1 span { color: #ff4d4d; }
+
+/* --- PROGRAMS CONTAINER --- */
+.programs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+}
+
+.program-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Keeps it flexible for all devices */
+    background: #181818;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #2a2a2a;
+}
+
+.program-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.program-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.program-text h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* --- SMALLER FIXED IMAGE SIZE --- */
+.program-img {
+    flex: 0 0 auto; /* Prevents the container from growing */
+}
+
+.program-img img {
+    width: 350px;      /* Fixed width to make them smaller */
+    height: 250px;     /* Fixed height matching your preferred yoga size */
+    object-fit: cover; /* Crops the image to fit the box perfectly */
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #333;
+}
+
+/* --- BUTTON STYLE --- */
+.btn {
+    display: inline-block;
+    background: #ff4d4d;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e60000;
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    color: #555;
+}
+
+/* --- MOBILE FIX --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack logo above links */
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin: 5px 10px; /* Tighter spacing for mobile menu */
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .card-container {
+        margin: 40px auto;
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Force cards to full width on small phones */
+        max-width: 100%;
+    }
+}

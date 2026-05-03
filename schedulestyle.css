@@ -1,0 +1,134 @@
+/* --- UNIVERSAL SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION (Matching your style) --- */
+header {
+    background: #000;
+    padding: 20px 0;
+    border-bottom: 2px solid #ff4d4d;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span { color: #ff4d4d; }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- SCHEDULE STYLING --- */
+.schedule-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.schedule-section h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.schedule-section h1 span { color: #ff4d4d; }
+
+.subtitle {
+    color: #888;
+    margin-bottom: 50px;
+}
+
+/* Table Design */
+.table-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto; /* Enables horizontal scroll on tiny phones */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #181818;
+}
+
+th, td {
+    padding: 20px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+}
+
+th {
+    background: #ff4d4d;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.time-slot {
+    background: #222;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+/* Class Labels */
+.class-card {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.cardio { background: rgba(255, 77, 77, 0.1); color: #ff4d4d; border: 1px solid #ff4d4d; }
+.yoga { background: rgba(0, 200, 255, 0.1); color: #00c8ff; border: 1px solid #00c8ff; }
+.strength { background: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid #555; }
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+    background: #000;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
