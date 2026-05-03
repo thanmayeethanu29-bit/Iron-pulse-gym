@@ -158,13 +158,18 @@ footer {
     .hero {
         min-height: 60vh;
     }
-
-    .card-container {
-        margin: 40px auto;
+    .program-card {
+        height: auto !important; /* Prevents text/image overlap */
+        min-height: 450px; 
+        display: flex;
+        flex-direction: column;
+        padding: 20px !important;
     }
-    
-    .card {
-        flex: 1 1 100%; /* Force cards to full width on small phones */
-        max-width: 100%;
+
+    .program-card img {
+        width: 100% !important;
+        height: auto !important;
+        position: static !important; /* Resets any absolute positioning */
+        margin-top: 20px;
     }
 }
