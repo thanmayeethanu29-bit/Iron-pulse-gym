@@ -192,14 +192,21 @@ footer {
 }
 
 /* --- MOBILE RESPONSIVE --- */
+/* Add this to your Contact/Global CSS */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-    
     nav {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column !important;
+        padding-bottom: 15px;
+    }
+
+    nav a {
+        padding: 10px !important;
+        display: block;
+        border-bottom: 1px solid #333; /* Adds a clean divider */
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem !important; /* Prevents "GET IN TOUCH" from breaking lines */
     }
 }
 
@@ -210,6 +217,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-}
+
 
     
