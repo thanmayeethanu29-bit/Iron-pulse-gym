@@ -131,4 +131,13 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+
+    section {
+        overflow-x: auto !important; /* Allows swiping left/right */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 600px; /* Maintains the table shape so text doesn't crush */
+    }
 }
