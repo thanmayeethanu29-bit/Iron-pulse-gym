@@ -10,60 +10,68 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
+
+/* --- NAVIGATION (Membership Style) --- */
 header {
     background: #000;
     padding: 20px 0;
     border-bottom: 2px solid #ff4d4d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Stacked logo above links for mobile look */
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    gap: 15px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.logo span {
-    color: #ff4d4d;
-}
+.logo span { color: #ff4d4d; }
 
 nav ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: center;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
+nav ul li { margin: 5px 15px; }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* --- CONTACT HEADER (Color Updated to Gradient) --- */
+/* --- CONTACT HEADER --- */
 .contact-header {
     text-align: center;
-    padding: 100px 20px 80px; /* Adjusted padding to match Programs style */
-    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%); /* Same as programmes page */
+    padding: 100px 20px 80px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
 .contact-header h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
-    font-weight: 900; /* Bolded to match Programs style */
+    font-weight: 900;
 }
 
-.contact-header h1 span {
-    color: #ff4d4d;
-}
+.contact-header h1 span { color: #ff4d4d; }
 
 /* --- LAYOUT CONTAINER --- */
 .contact-container {
@@ -78,6 +86,7 @@ nav ul li a {
 /* --- CONTACT INFO (Left Side) --- */
 .contact-info {
     flex: 1;
+    text-align: center; /* Centers the text alignment on the left side too */
 }
 
 .contact-info h2 {
@@ -91,12 +100,11 @@ nav ul li a {
     color: #ccc;
 }
 
-/* --- VIEW MAP BUTTON --- */
+/* --- VIEW MAP BUTTON (CENTERED) --- */
 .btn-map {
-    display: inline-block;
-    width:fit-content;
-    margin:25px auto 0;
-    margin-top: 25px; /* Adds space below your contact info */
+    display: block;          /* Changed to block to allow centering */
+    width: fit-content;      /* Only as wide as the text */
+    margin: 30px auto;       /* 'auto' centers it horizontally */
     padding: 15px 35px;
     background: transparent;
     color: #ff4d4d;
@@ -105,7 +113,7 @@ nav ul li a {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 5px; /* Consistent with your form and header style */
+    border-radius: 5px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
     cursor: pointer;
@@ -115,9 +123,8 @@ nav ul li a {
     background: #ff4d4d;
     color: #ffffff;
     box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
-    transform: translateY(-5px); /* Matches the "Pop" effect of your other buttons */
+    transform: translateY(-5px);
 }
-
 
 /* --- CONTACT FORM (Right Side) --- */
 .contact-form {
@@ -159,11 +166,6 @@ nav ul li a {
     transition: 0.3s;
 }
 
-.form-group input:focus, 
-.form-group textarea:focus {
-    border-color: #ff4d4d;
-}
-
 /* --- SUBMIT BUTTON --- */
 .btn-submit {
     width: 100%;
@@ -179,11 +181,6 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-.btn-submit:hover {
-    background: #e60000;
-    transform: scale(1.02);
-}
-
 /* --- FOOTER --- */
 footer {
     text-align: center;
@@ -195,27 +192,31 @@ footer {
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
- .contact-container {
+    .contact-container {
         flex-direction: column;
+        text-align: center;
     }
-    
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
 
-    .contact-hero h1 {
-        font-size: 2.5rem !important; /* Prevents "GET IN TOUCH" from breaking lines */
+    .contact-header h1 {
+        font-size: 2.5rem;
     }
-}
 
     .btn-map {
-        display: block;
         width: 100%;
         max-width: 300px;
-        margin:centre;
     }
+}
 
-
-    
+/* --- DESKTOP RE-ADJUSTMENT --- */
+@media (min-width: 769px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-info {
+        text-align: left; /* Restores left-alignment for desktop */
+    }
+    .btn-map {
+        margin: 30px 0; /* Align button to left on desktop */
+    }
+}
