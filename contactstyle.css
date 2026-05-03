@@ -66,12 +66,12 @@ nav ul li a:hover {
 /* --- CONTACT HEADER (Color Updated to Gradient) --- */
 .contact-header {
     text-align: center;
-    padding: 100px 20px 80px; /* Adjusted padding to match Programs style */
+    padding: clamp(60px, 10vh, 100px) 20px; /* Adjusted padding to match Programs style */
     background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%); /* Same as programmes page */
 }
 
 .contact-header h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     text-transform: uppercase;
     font-weight: 900; /* Bolded to match Programs style */
 }
