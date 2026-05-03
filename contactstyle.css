@@ -25,7 +25,17 @@ nav {
     max-width:1200px;
     padding:0 5%;
 }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
 
+nav ul li a:hover {
+    color: #ff4d4d;
+}
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -206,18 +216,10 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
-    nav ul{
-        gap:101px;
-        justify-content:center;
-        padding:0;
-        margin:0;
-    }
     nav ul li{
         margin:0 10px;
     }
-    nav ul li a{
-        margin:0.9rem;
-    }
+   
     .btn-map {
         display: block;
         width: 100%;
