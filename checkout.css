@@ -82,3 +82,21 @@
     background: #e60000;
     transform: translateY(-2px);
 }
+/* Add this to your Membership/Registration CSS */
+@media (max-width: 480px) {
+    .registration-card {
+        width: 95% !important;
+        margin: 10px auto;
+    }
+
+    /* This targets the row containing Expiry and CVV */
+    .form-row, .expiry-cvv-container { 
+        display: flex;
+        flex-direction: column !important; 
+    }
+
+    input {
+        width: 100% !important; /* Makes every field full-width */
+        box-sizing: border-box;
+    }
+}
